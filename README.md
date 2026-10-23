@@ -2,9 +2,9 @@
 
 **在 Codex 中管理你的 AI 团队。**
 
-Windows 试用版 · 当前版本 **v2.3.16**
+Windows 试用版 · 当前版本 **v2.3.16（安装修订版）**
 
-[下载安装包](https://github.com/tomlww/ensemble-codex/releases/tag/v2.3.16) · [反馈问题](https://github.com/tomlww/ensemble-codex/issues)
+[下载安装包](https://github.com/tomlww/ensemble-codex/releases/download/v2.3.16/ensemble-2.3.16-windows-setup.zip) · [发布说明](https://github.com/tomlww/ensemble-codex/releases/tag/v2.3.16) · [反馈问题](https://github.com/tomlww/ensemble-codex/issues)
 
 ## 能做什么
 
@@ -18,22 +18,14 @@ Windows 试用版 · 当前版本 **v2.3.16**
 
 ## 安装
 
-1. 准备 **Windows、已安装并登录的 Codex、Node.js 24+、Python 和 Pillow（支持 JPEG/WebP）**。
-2. 在 [Releases](https://github.com/tomlww/ensemble-codex/releases/tag/v2.3.16) 的 **Assets** 下载 `ensemble-2.3.16-windows.zip`。不要下载 GitHub 自动生成的 `Source code` 压缩包；它不包含可安装的插件目录。
-3. 解压到长期保留的文件夹，在该文件夹打开 PowerShell，运行：
+1. 在 **64 位 Windows** 上安装并登录 Codex，至少打开一次。
+2. 下载上方的 **`ensemble-2.3.16-windows-setup.zip`**，完整解压。不要使用旧版 `ensemble-2.3.16-windows.zip`，也不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
+3. **双击 `Install.cmd`**，等待窗口显示“安装和运行检查全部通过”。不用打开终端、粘贴代码或使用管理员账户。
+4. 重新打开 Codex，在插件中打开 **协奏**。第一次点击 **创建我的团队**，会在你的账户建立 **统筹 + 12 位工程师，共 13 个独立聊天**。初始化不会发送模型消息；之后可自行增删成员。
 
-   ```powershell
-   .\Install.ps1
-   ```
+安装器自动启动 `Install.ps1`，检测并定位 Codex、Node.js 和 Python/Pillow。缺少运行环境时，会从官方站点下载经过 SHA-256 校验的插件专用组件，因此首次安装需要联网。不会永久修改 PowerShell 执行策略、系统 PATH 或系统 Python/Node.js；如果组织组策略禁止 PowerShell，仍需要管理员处理。
 
-   安装脚本检查依赖并注册本地插件，不自动安装依赖或修改系统权限。若脚本策略限制运行，可在已配置 Codex CLI 的终端中执行等价命令：
-
-   ```powershell
-   codex plugin marketplace add . --json
-   codex plugin add engineering-team-panel@engineering-team-local --json
-   ```
-
-4. 重新打开 Codex，打开 **协奏**。第一次点击 **创建我的团队**，会在你的账户建立 **统筹 + 12 位工程师，共 13 个独立聊天**。初始化不会发送模型消息；之后可自行增删成员。
+插件文件会复制到 `%LOCALAPPDATA%\OpenAI\Ensemble\packages\`。注册前会实际检查页面、18 张头像、图片解码和聊天服务；失败会保留原因和日志，不会显示安装成功。日志在 `%LOCALAPPDATA%\OpenAI\Ensemble\logs\`。
 
 这是供安装试用的发行仓库，插件运行文件包含在 Release 安装包中；尚未上架官方公共插件目录。
 
