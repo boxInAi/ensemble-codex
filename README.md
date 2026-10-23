@@ -2,9 +2,9 @@
 
 **在 Codex 中管理你的 AI 团队。**
 
-Windows 试用版 · 当前版本 **v2.3.16（安装修订版）**
+Windows 试用版 · 当前版本 **v2.3.17**
 
-[下载安装包](https://github.com/tomlww/ensemble-codex/releases/download/v2.3.16/ensemble-2.3.16-windows-setup.zip) · [发布说明](https://github.com/tomlww/ensemble-codex/releases/tag/v2.3.16) · [反馈问题](https://github.com/tomlww/ensemble-codex/issues)
+[下载安装包](https://github.com/tomlww/ensemble-codex/releases/download/v2.3.17/ensemble-2.3.17-windows.zip) · [发布说明](https://github.com/tomlww/ensemble-codex/releases/tag/v2.3.17) · [反馈问题](https://github.com/tomlww/ensemble-codex/issues)
 
 ## 能做什么
 
@@ -19,7 +19,7 @@ Windows 试用版 · 当前版本 **v2.3.16（安装修订版）**
 ## 安装
 
 1. 在 **64 位 Windows** 上安装并登录 Codex，至少打开一次。
-2. 下载上方的 **`ensemble-2.3.16-windows-setup.zip`**，完整解压。不要使用旧版 `ensemble-2.3.16-windows.zip`，也不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
+2. 下载上方的 **`ensemble-2.3.17-windows.zip`**，完整解压。不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
 3. **双击 `Install.cmd`**，等待窗口显示“安装和运行检查全部通过”。不用打开终端、粘贴代码或使用管理员账户。
 4. 重新打开 Codex，在插件中打开 **协奏**。第一次点击 **创建我的团队**，会在你的账户建立 **统筹 + 12 位工程师，共 13 个独立聊天**。初始化不会发送模型消息；之后可自行增删成员。
 
