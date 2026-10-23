@@ -2,16 +2,17 @@
 
 **在 Codex 中管理你的 AI 团队。**
 
-Windows 试用版 · 当前版本 **v2.3.18**
+Windows 试用版 · 当前版本 **v2.3.19**
 
-[下载安装包](https://github.com/tomlww/ensemble-codex/releases/download/v2.3.18/ensemble-2.3.18-windows.zip) · [发布说明](https://github.com/tomlww/ensemble-codex/releases/tag/v2.3.18) · [反馈问题](https://github.com/tomlww/ensemble-codex/issues)
+[下载安装包](https://github.com/tomlww/ensemble-codex/releases/download/v2.3.19/ensemble-2.3.19-windows.zip) · [发布说明](https://github.com/tomlww/ensemble-codex/releases/tag/v2.3.19) · [反馈问题](https://github.com/tomlww/ensemble-codex/issues)
 
 ## 能做什么
 
 - 用头像和成员列表进入各自的 Codex 聊天，保留原聊天记录。
 - 新增、修改、移除成员，自定义名称、职责和头像。
 - 默认提供 **18 张宠物头像**；上传头像作为独立文件保存在本机。
-- 支持图片选择、粘贴和拖入，以及可用模型、推理强度和权限选择。
+- 支持图片选择、粘贴和拖入，以及可用模型、推理强度和权限选择。大图分块上传，预览缩略图，发送时保留原图。
+- 草稿与附件保存在本机，刷新可恢复；图片读取失败可单独重试。
 - 显示聊天摘要和工作状态，支持原聊天与插件之间的写入权交接。
 
 成员拥有独立聊天。跨成员协作需要明确分配任务；当前版本不提供项目群聊、@多成员自动调度或完整文件预览器。部分模型与权限设置受原聊天持有状态限制。
@@ -19,7 +20,7 @@ Windows 试用版 · 当前版本 **v2.3.18**
 ## 安装
 
 1. 在 **64 位 Windows** 上安装并登录 Codex，至少打开一次。
-2. 下载上方的 **`ensemble-2.3.18-windows.zip`**，完整解压。不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
+2. 下载上方的 **`ensemble-2.3.19-windows.zip`**，完整解压。不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
 3. **双击 `Install.cmd`**，等待窗口显示“安装和运行检查全部通过”。不用打开终端、粘贴代码或使用管理员账户。
 4. **完全退出后重新打开 Codex**，在左侧 **“…” → 协奏** 打开工作区，或在插件详情点击 **打开协奏工作区**。入口可自行固定到侧栏。第一次点击 **创建我的团队**，会在你的账户建立 **统筹 + 12 位工程师，共 13 个独立聊天**。初始化不会发送模型消息；之后可自行增删成员。
 
