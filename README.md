@@ -2,15 +2,17 @@
 
 **在 Codex 中管理你的 AI 团队。**
 
-Windows 试用版 / macOS 实验版 · 当前版本 **v2.3.24**
+Windows 试用版 / macOS 实验版 · 当前版本 **v2.3.25**
 
-[下载 Windows 安装包](https://github.com/boxInAi/ensemble-codex/releases/download/v2.3.24/qizou-2.3.24-windows.zip) · [发布说明](https://github.com/boxInAi/ensemble-codex/releases/tag/v2.3.24) · [反馈问题](https://github.com/boxInAi/ensemble-codex/issues)
+[下载 Windows 安装包](https://github.com/boxInAi/ensemble-codex/releases/download/v2.3.25/qizou-2.3.25-windows.zip) · [发布说明](https://github.com/boxInAi/ensemble-codex/releases/tag/v2.3.25) · [反馈问题](https://github.com/boxInAi/ensemble-codex/issues)
 
-[下载 macOS 实验版](https://github.com/boxInAi/ensemble-codex/releases/download/v2.3.24/qizou-2.3.24-macos.zip)
+[下载 macOS 实验版](https://github.com/boxInAi/ensemble-codex/releases/download/v2.3.25/qizou-2.3.25-macos.zip)
 
 Mac 版已完成适配和自动化检查，**尚未真实 Mac 实机验收，未经过 Apple 签名与公证**。适配 Apple 芯片和 Intel；完整解压后双击 `Install.command`，自动准备私有 Node.js 与图片组件，无需 Homebrew 或 Python。先安装并登录 Codex（或含 Codex 的 ChatGPT 桌面版）。安装器最低 macOS 13.5，宿主应用要求如更高，以其要求为准。
 
-v2.3.24 新增长聊天负载与资源保留修复：不传输隐藏工具输出，移除重复历史，切换成员释放旧DOM，图片离屏释放，并支持每页120条消息。已保留此前的后台暂停轮询、断线恢复及安全升级修复。普通断线会自动重连；宿主渲染器完全崩溃时，需关闭该工作区后重新打开。该修复不等于已证明宿主崩溃的根因。
+v2.3.25 修复工作状态动画：页面已确认的任务运行状态不再被迟到的未知/空闲快照覆盖；审批、完成、中断、失败、断线时停止转圈。超过15秒没有新运行证据会过期。当前公开接口不能可靠读取另一原生 Codex 服务持有的全部聊天实时状态，这类成员仍可能显示未知，不能保证转圈。本次没有添加全局钩子或更改权限。
+
+保留此前的长聊天负载、后台暂停轮询、断线恢复及安全升级修复。宿主渲染器完全崩溃时仍需重新打开工作区，尚未证明所有灰屏的根因。
 
 ## 能做什么
 
@@ -26,7 +28,7 @@ v2.3.24 新增长聊天负载与资源保留修复：不传输隐藏工具输出
 ## Windows 安装
 
 1. 在 **64 位 Windows** 上安装并登录 Codex，至少打开一次。
-2. 下载上方的 **`qizou-2.3.24-windows.zip`**，完整解压。不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
+2. 下载上方的 **`qizou-2.3.25-windows.zip`**，完整解压。不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
 3. **双击 `Install.cmd`**，等待窗口显示“安装和运行检查全部通过”。不用打开终端、粘贴代码或使用管理员账户。
 4. **完全退出后重新打开 Codex**，在左侧 **“…” → 启奏** 打开工作区，或在插件详情点击 **打开启奏工作区**。入口可自行固定到侧栏。第一次点击 **创建我的团队**，会在你的账户建立 **统筹 + 12 位工程师，共 13 个独立聊天**。初始化不会发送模型消息；之后可自行增删成员。
 
