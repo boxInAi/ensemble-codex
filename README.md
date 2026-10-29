@@ -2,17 +2,19 @@
 
 **在 Codex 中管理你的 AI 团队。**
 
-Windows 试用版 / macOS 实验版 · 当前版本 **v2.3.25**
+Windows 试用版 / macOS 实验版 · 当前版本 **v2.3.26**
 
-[下载 Windows 安装包](https://github.com/boxInAi/ensemble-codex/releases/download/v2.3.25/qizou-2.3.25-windows.zip) · [发布说明](https://github.com/boxInAi/ensemble-codex/releases/tag/v2.3.25) · [反馈问题](https://github.com/boxInAi/ensemble-codex/issues)
+[下载 Windows 安装包](https://github.com/boxInAi/ensemble-codex/releases/download/v2.3.26/qizou-2.3.26-windows.zip) · [发布说明](https://github.com/boxInAi/ensemble-codex/releases/tag/v2.3.26) · [反馈问题](https://github.com/boxInAi/ensemble-codex/issues)
 
-[下载 macOS 实验版](https://github.com/boxInAi/ensemble-codex/releases/download/v2.3.25/qizou-2.3.25-macos.zip)
+[下载 macOS 实验版](https://github.com/boxInAi/ensemble-codex/releases/download/v2.3.26/qizou-2.3.26-macos.zip)
 
 Mac 版已完成适配和自动化检查，**尚未真实 Mac 实机验收，未经过 Apple 签名与公证**。适配 Apple 芯片和 Intel；完整解压后双击 `Install.command`，自动准备私有 Node.js 与图片组件，无需 Homebrew 或 Python。先安装并登录 Codex（或含 Codex 的 ChatGPT 桌面版）。安装器最低 macOS 13.5，宿主应用要求如更高，以其要求为准。
 
 v2.3.25 修复工作状态动画：页面已确认的任务运行状态不再被迟到的未知/空闲快照覆盖；审批、完成、中断、失败、断线时停止转圈。超过15秒没有新运行证据会过期。当前公开接口不能可靠读取另一原生 Codex 服务持有的全部聊天实时状态，这类成员仍可能显示未知，不能保证转圈。本次没有添加全局钩子或更改权限。
 
 保留此前的长聊天负载、后台暂停轮询、断线恢复及安全升级修复。宿主渲染器完全崩溃时仍需重新打开工作区，尚未证明所有灰屏的根因。
+
+v2.3.26 将“老板默认派工、员工实施、验收后交付”的团队原则随安装包分发，并为模型提供名单、派工、读结果和补员四个受限工具。新电脑创建团队和后续成员会获得角色规则，升级保留本机团队与原聊天。
 
 ## 能做什么
 
@@ -23,12 +25,18 @@ v2.3.25 修复工作状态动画：页面已确认的任务运行状态不再被
 - 草稿与附件保存在本机，刷新可恢复；图片读取失败可单独重试。
 - 显示聊天摘要和工作状态，支持原聊天与插件之间的写入权交接。
 
-成员拥有独立聊天。跨成员协作需要明确分配任务；当前版本不提供项目群聊、@多成员自动调度或完整文件预览器。部分模型与权限设置受原聊天持有状态限制。
+成员拥有独立聊天。跨成员协作通过统筹明确派工；当前版本不提供项目群聊、@多人群发、无人值守项目调度或完整文件预览器。部分模型与权限设置受原聊天持有状态限制。
+
+## 老板与员工的默认分工
+
+新版安装包自带公开团队章程与版本化角色策略。老板负责拆任务、分派对应员工、安排验收和汇总；员工负责具体实现和验证，专业人员不足时可以补充。新电脑安装、初始化团队和新增成员都会获得对应角色指令；升级保留本机成员与原聊天。
+
+模型可通过团队工具查找成员、实际派工、读取结果及补充角色。初始化仍需本人点击“创建我的团队”，不会因为安装或列出成员自动发起模型任务。规则不能保证模型每次遵循，也不会提升权限或自动批准操作；未实际派工或未验证的结果不得宣称完成。
 
 ## Windows 安装
 
 1. 在 **64 位 Windows** 上安装并登录 Codex，至少打开一次。
-2. 下载上方的 **`qizou-2.3.25-windows.zip`**，完整解压。不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
+2. 下载上方的 **`qizou-2.3.26-windows.zip`**，完整解压。不要下载 GitHub 自动生成的 `Source code` 压缩包安装。
 3. **双击 `Install.cmd`**，等待窗口显示“安装和运行检查全部通过”。不用打开终端、粘贴代码或使用管理员账户。
 4. **完全退出后重新打开 Codex**，在左侧 **“…” → 启奏** 打开工作区，或在插件详情点击 **打开启奏工作区**。入口可自行固定到侧栏。第一次点击 **创建我的团队**，会在你的账户建立 **统筹 + 12 位工程师，共 13 个独立聊天**。初始化不会发送模型消息；之后可自行增删成员。
 
